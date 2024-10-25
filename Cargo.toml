@@ -1,0 +1,41 @@
+[package]
+name = "audio"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasm-bindgen = { version = "0.2.94" }
+web-sys = { version = "0.3.40", features = [
+    "Window",
+    "Document",
+    "HtmlCanvasElement",
+    "CanvasRenderingContext2d",
+    "console",
+    "AudioContext",
+    "AnalyserNode",
+    "AudioBufferSourceNode",
+    "AudioBuffer",
+    "AudioDestinationNode",
+    "Response",
+    "MediaSource",
+    "SourceBuffer",
+    "HtmlAudioElement",
+    "Url",
+    "Headers",
+    "ReadableStream",
+    "ReadableStreamDefaultReader",
+    "HtmlCollection",
+    "MediaElementAudioSourceNode",
+    "HtmlMediaElement"
+] }
+js-sys = "0.3.70"
+rustfft = "6.2.0"
+console_error_panic_hook = "0.1.6"
+wasm-bindgen-futures = "0.4.44"
+lazy_static = "1.5.0"
+futures = "0.3.31"
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5.0", features = ["fs", "trace"] }
+
+[lib]
+crate-type = ["cdylib"]
